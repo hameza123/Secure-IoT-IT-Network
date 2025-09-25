@@ -23,17 +23,16 @@ This project designed and implemented a secure IoT/IT converged network infrastr
 ### 1. Network Architecture Design
 The foundation was a segmented network with four security zones managed by PfSense firewall: IoT, Users, DMZ, and WAN. This provided isolation and controlled communication paths.
 *Ref 1: Network Segmentation Diagram*
-![Network Diagram](imgsrc) *PfSense firewall configuration showing the four security zones and inter-zone routing rules.*
+![Network Diagram](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-06-26%20at%2012.20.46.png) *PfSense firewall configuration showing the four security zones and inter-zone routing rules.*
 
 ### 2. Authentication Infrastructure Setup
 Deployed OpenLDAP for directory services and FreeRADIUS for authentication, implementing certificate-based (EAP-TLS) for IoT devices and credential-based for users.
 *Ref 2: RADIUS Server Configuration*
-![RADIUS Setup](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-06-26%20at%2012.20.46.png) *FreeRADIUS configuration showing EAP-TLS settings and LDAP integration for user authentication.*
+![RADIUS Setup](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-09-25%20at%2015.35.34.png) *FreeRADIUS configuration showing EAP-TLS settings and LDAP integration for user authentication.*
 
 ### 3. Secure Wireless Access Point
 Configured hostapd on Raspberry Pi with 802.1X support to create a secure wireless network requiring device authentication before network access.
 *Ref 3: Hostapd 802.1X Configuration*
-![AP Config](imgsrc) *Hostapd configuration file showing EAP authentication settings and RADIUS server integration.*
 
 ### 4. IoT Device Integration
 Connected Raspberry Pi with Arduino and DHT22 sensor to the network, implementing certificate authentication and data collection pipeline.
@@ -43,12 +42,12 @@ Connected Raspberry Pi with Arduino and DHT22 sensor to the network, implementin
 ### 5. Monitoring & Data Visualization
 Deployed TICK stack (Telegraf, InfluxDB, Chronograf) to collect, store, and visualize sensor data with proper JSON transformation for data normalization.
 *Ref 5: Sensor Data Dashboard*
-![Dashboard](imgsrc) *Chronograf dashboard showing real-time environmental data from DHT22 sensors.*
+![Dashboard](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-09-25%20at%2015.36.20.png) *Chronograf dashboard showing real-time environmental data from DHT22 sensors.*
 
 ### 6. Security Validation & Testing
 Conducted comprehensive testing including ICMP validation, Wireshark packet analysis, and security control verification to ensure proper segmentation and authentication.
 *Ref 6: Network Segmentation Test*
-![Testing](imgsrc) *Wireshark capture showing filtered traffic between VLANs demonstrating proper isolation.*
+![Testing](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-09-25%20at%2015.37.21.png) *Wireshark capture showing filtered traffic between VLANs demonstrating proper isolation.*
 
 ## Challenges & Solutions
 **Challenge:** 802.1X handshake failures between hostapd and FreeRADIUS
