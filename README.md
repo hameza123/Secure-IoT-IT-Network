@@ -28,7 +28,7 @@ The foundation was a segmented network with four security zones managed by PfSen
 ### 2. Authentication Infrastructure Setup
 Deployed OpenLDAP for directory services and FreeRADIUS for authentication, implementing certificate-based (EAP-TLS) for IoT devices and credential-based for users.
 *Ref 2: RADIUS Server Configuration*
-![RADIUS Setup](imgsrc) *FreeRADIUS configuration showing EAP-TLS settings and LDAP integration for user authentication.*
+![RADIUS Setup](https://github.com/hameza123/Secure-IoT-IT-Network/blob/main/Screenshot%202025-06-26%20at%2012.20.46.png) *FreeRADIUS configuration showing EAP-TLS settings and LDAP integration for user authentication.*
 
 ### 3. Secure Wireless Access Point
 Configured hostapd on Raspberry Pi with 802.1X support to create a secure wireless network requiring device authentication before network access.
